@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    width: 99%;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+    padding-top: 30px;
+}
+
+body {
+    background-image: url(https://media.istockphoto.com/id/1486033206/photo/happy-childhood-caucasian-children-playing-outside-during-the-day-scratching-the-ground-with.jpg?s=612x612&w=0&k=20&c=3ld3z8QOcf9OwNDl0GPtwSaJQBIpTJxGuq4VkTcnOCQ=);
+    background-size: cover;
+
+
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: beige; */
+
+
+
+
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    /* border: 3px solid black; */
+    padding-top: 50px;
+    width: 400px;
+    height: 400px;
+    margin-left: 80px;
+
+
+
+}
+
+.tic-tac {
+    border: 2px solid black;
+    font-size: 10vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+/* css to remove some specific borders */
+.tic-tac:hover {
+    background-color: white;
+}
+
+.tic-tac:first-child,
+.tic-tac:nth-child(2),
+.tic-tac:nth-child(3) {
+    border-top: none;
+}
+
+.tic-tac:nth-child(3),
+.tic-tac:nth-child(6),
+.tic-tac:nth-child(9) {
+    border-right: none;
+
+}
+
+.tic-tac:nth-child(1),
+.tic-tac:nth-child(4),
+.tic-tac:nth-child(7) {
+    border-left: none;
+
+}
+
+.tic-tac:nth-child(7),
+.tic-tac:nth-child(8),
+.tic-tac:nth-child(9) {
+    border-bottom: none;
+
+}
+
+
+
+
+.details {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    /* border: 2px solid black; */
+
+}
+
+.details h1 {
+    color: white;
+    font-weight: bolder;
+}
+
+
+#reset {
+
+    width: 80px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    margin: 20px 0 0 10px;
+}
+
+@media (min-width:350px){
+
+    body {
+        background-image: url(https://media.istockphoto.com/id/1486033206/photo/happy-childhood-caucasian-children-playing-outside-during-the-day-scratching-the-ground-with.jpg?s=612x612&w=0&k=20&c=3ld3z8QOcf9OwNDl0GPtwSaJQBIpTJxGuq4VkTcnOCQ=);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .navbar {
+        width: 99%;
+        height: 60px;
+        background-color: black;
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bolder;
+        padding-top: 30px;
+    }
+
+    .section {
+        border: 2px solid white;
+
+    }
+
+    .game {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 100px);
+        margin: 15px;
+        height: 300px;
+        width: 280px;
+        padding: 30px;
+        justify-content: center;
+        font-weight: bolder;
+
+
+
+    }
+
+    .details {
+        height: 250px;
+        width: 150px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    #reset {
+        width: 50px;
+        border-style: none;
+
+    }
+
+
+}
+
+@media (max-width:800px) {
+    .section {
+        border: 2px solid white;
+
+    }
+
+    .game {
+        display: grid;
+
+        margin: 15px;
+        height: 300px;
+        width: 280px;
+        padding: 30px;
+        justify-content: center;
+        font-weight: bolder;
+
+
+
+    }
+
+    .details {
+        height: 250px;
+        width: 150px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    #reset {
+        width: 50px;
+        border-style: none;
+
+    }
+
+
+}

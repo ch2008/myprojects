@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="tictac.css">
+    <!-- <script src="tictac.js">javascript</script> -->
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Tic-Tac-Toe</h1>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <div class="game">
+                <div class="tic-tac"></div>
+                <div class="tic-tac"></div>
+                <div class="tic-tac"></div>
+                <div class="tic-tac"></div>
+                <div class="tic-tac"></div>
+                <div class="tic-tac"></div>
+                <div class="tic-tac"></div>
+                <div class="tic-tac"></div>
+                <div class="tic-tac"></div>
+            </div>
+            <div class="details">
+                
+                <div>
+                    <h1> welcome to Tic Tac Toe</h1>
+                    <span class="info">
+                        <h2 style="color: white;" class="playerOne">player1=X</h2>
+                        <h2 style="color: white;" class="playerTwo">player2=o</h2>
+                    </span>
+
+                  
+                </div>
+                <button id="reset" onclick=" Restart()">Reset</button>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <!-- javascript is starting from here -->
+    <script>
+
+        const boxes = document.querySelectorAll(".tic-tac");
+        const Reset = document.getElementById("reset");
+        const player1 = document.getElementsByClassName("playerOne");
+        const player2 = document.getElementsByClassName("playerTwo");
+
+
+        let currentPlayer = "x";
+        let nextPlayer = "o";
+        let playerTurn = "";
+
+        //************* functions to start the game
+        // here inside the main function statrs game(),we invoke some other functions like
+        // changeTurn(),
+        // checkWin(),
+        // checkTie().
+        // **************//
+
+        const startGame = () => {
+            boxes.forEach((box) => {
+                box.addEventListener('click', (e) => {
+                    if (e.target.innerHTML === "") {
+                        e.target.innerHTML = playerTurn;
+                        if (checkWin()) {
+                            // console.log(`${playerTurn} is the Winner`);
+                            alert (`${playerTurn} is the Winner,please click on Reset button`)
+                           
+                        } else if (checkTie()) {
+                            // console.log(`It is a Tie`)
+                            alert (`It is a Tie,please click on Reset button`)
+                            
+                        } else  {
+                            changeTurn();
+                        } 
+
+                        }
+                        
+                    }
+
+            )}
+            )};
+            // function to chnge the player turn
+
+            const changeTurn = () => {
+                if (playerTurn === currentPlayer) {
+                    playerTurn = nextPlayer
+                } else {
+                    playerTurn = currentPlayer
+                }
+            }
+
+
+
+        
+
+        let winningConditions = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6],
+
+        ]
+        const checkWin = () => {
+
+            for (let i = 0; i < winningConditions.length; i++) {
+                // destructuring of Array winningConditions
+                const [pos1, pos2, pos3] = winningConditions[i]
+                if (boxes[pos1].innerHTML !== "" &&
+                    boxes[pos1].innerHTML === boxes[pos2].innerHTML &&
+                    boxes[pos2].innerHTML === boxes[pos3].innerHTML) {
+                    return true
+                }
+
+            }
+            return false
+        }
+
+        // function to check for tie
+
+        const checkTie = () => {
+            let Emptybox = 0;
+            boxes.forEach(box => {
+                if (box.textContent === "") {
+                    Emptybox++
+                }
+            })
+            return Emptybox === 0 && !checkWin()
+        }
+
+ 
+
+       startGame()
+
+// function to Restart the game and it is been invoked in the Reset butto in HTML //
+       const Restart =()=>{
+           Reset.addEventListener('click',
+           boxes.forEach((box)=>{
+            box.innerHTML=""
+           }))
+        }
+    
+     
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
