@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="todo.css">
+    <script src="todo.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <header>
+    <navbar class="nav">
+        <h1>To Do List </h1>
+       
+    </navbar>
+  </header>
+  <main>
+   
+
+    <div class="container">
+       
+        <div class ="box" id="box">
+           
+                <input type="text"  id="input-Value">
+        
+            <span class ="spanbox">
+              <button id="button" type="submit">Add Task</button>
+            </span>
+        </div>
+
+
+        <div class="box2" id="daily">
+            <h1 style="cursor: pointer;">Daily</h1>
+            <p id="presentTime"></p>
+            <ul id="ulist"></ul>
+              
+        </div>
+        
+        <div class="box2" id="expences">
+            <h1>Expences</h1>
+            <ul id="ulist"></ul>
+              
+        </div>
+</body>
+</main>
+</html>

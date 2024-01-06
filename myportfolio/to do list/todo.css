@@ -1,0 +1,163 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+ }
+ header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+ }
+
+ body {
+     display: flex;
+     flex-direction:column ;
+     justify-content: center;
+     align-items:center;
+     background-color: rgb(11, 7, 0);
+     background-image: url(https://cdn.pixabay.com/photo/2023/04/12/19/38/camera-7921061_1280.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     padding-left: 30px;
+ }
+ .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 800px;
+    padding: 10px;
+    height: 70px;
+    background-color: rgba(255, 145, 0, 0.807);
+    margin-bottom: 20px;
+ }
+
+ .container {
+     display: flex;
+     justify-content:flex-start;
+     align-items:center;
+     flex-direction: column;
+     min-height: 100vh;
+     width:1000px;
+     border: 3px solid coral;
+   
+ }
+
+ .box {
+     display: flex;
+     justify-content: center;
+     flex-direction:row;
+     align-items: center;
+     width: 450px;
+     height: 110px;
+     padding: 15px;
+     margin: 40px 0px 30px 0px;
+     background-color: white;
+     
+      
+
+
+ }
+
+
+ .box input {
+     width: 300px;
+     height: 60px;
+     border-radius: 5px;
+     border: 2px solid black;
+  
+ }
+
+ .spanbox {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 80px;
+     height: 70px;
+     border: 2px solid white;
+     border-radius: 5px;
+
+ }
+
+ .spanbox button {
+    height: 60px;
+    border-radius: 5px;
+    background-color: transparent;
+     font-weight: bold;
+     color: black;
+     font-size: medium;
+     font-style: none;
+ }
+
+ .box2 {
+     background-color:whitesmoke;
+     display: flex;
+     justify-content:space-evenly;
+     align-items: center;
+     padding: 25px;
+     flex-direction:column;
+     width: 100%;
+     height:auto;
+     margin-bottom: 20px;
+     
+ }
+ .inbox-Two{
+    height: 50px;
+    width: 380px;
+    border: 3px solid black;
+  
+   
+ }
+
+#ulist{
+    
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 20px;
+
+}
+ .inbox-Two ul li{
+    list-style: none;
+    /* margin-top: 20px; */
+ }
+ .inbox-Two span input{
+    height: 50px;
+ }
+
+#del .bi {
+    background-color: white;
+    margin-left: 10px;
+    height: 50px;
+}
+@media (max-width:800px) {
+
+   body{
+    background-image: url(https://cdn.pixabay.com/photo/2023/04/12/19/38/camera-7921061_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+.nav{
+    width: 100%;
+    font-size: small;
+}
+.box{
+   margin-left: 30px;
+    width: 80%;
+}
+#input-Value{
+    width: 60%;
+}
+
+.box2{
+  background-color: transparent;
+
+}
+#inbox-Two{
+    width: 300px;
+}
+}

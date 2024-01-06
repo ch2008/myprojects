@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(https://images.unsplash.com/photo-1543362906-acfc16c67564?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhlYWx0aHxlbnwwfHwwfHx8MA%3D%3D);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    height: 80px;
+    width: 900px;
+    margin: 20px 20px;
+    text-align: center;
+    padding-top: 18px;
+    background-color: rgba(139, 193, 116, 0.647);
+    color: white
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 600px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px rgb(217, 214, 214);
+}
+
+input{
+    height: 50px;
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color:rgb(39, 61, 5);
+    border: 1px solid rgba(139, 193, 116, 0.647);
+
+}
+p{
+    color: brown;
+}
+
+.results button {
+    background-color: rgba(105, 162, 81, 0.819);
+    margin-top: 20px;
+    width: 100px;
+    height: 50px;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+
+
+}
